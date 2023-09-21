@@ -1,3 +1,48 @@
+Q1. If a user can create and edit stages for a particular board. For example instead of Open > In Progress > Done if they want the stages of their task board to be Read > Working > Reviewing > Completed
+
+Ans: A user can create and edit stages for a board. We can implement a dynamic drop down for the user to choose the heading(stage) of the board. Example for the Done board we can provide options in the dropdown menu like Done and Completed.Similarly for Doing we can provie Doing and In-Progress. U ser can select the stage from the drop-down options.
+
+API Endpoints:
+To create new stage
+POST /api/boards/{boardId}/stages: 
+To update existing stage:
+PUT /api/boards/{boardId}/stages/{stageId}
+To fetch list of stages of the board:
+GET /api/boards/{boardId}/stages.
+
+Q2.If users can comment on tasks
+
+Ans: Users can comment on tasks. The todo component would have an additional comment component with user_id,comment_id and user_comment_text.
+
+API Endpoints:
+To Create a new comment for a task.
+POST /api/tasks/{taskId}/comments
+Body { user_id,user_comment_text}
+To Fetch the list of comments for a task.
+GET /api/tasks/{taskId}/comments
+
+Q3. Error Handling
+
+We can wrap our API calls inside try catch blocks for the error handling.Inside catch we can implement our normal functionality for the app and inside catch we can make alerts to tell the user that some error has occured. (Like backend returning res.status(400).json(e))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
