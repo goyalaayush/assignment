@@ -1,0 +1,18 @@
+.todo
+{
+   height: 10vh;
+    background-color: #CF9FFF;
+    border: 2px solid black;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50vh;
+}
+
+.con
+{
+    display: flex;
+    justify-content: center;
+}
+
